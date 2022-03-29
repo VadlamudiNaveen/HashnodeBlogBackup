@@ -1,4 +1,4 @@
-## Data Migration - How to Perform Huge Data Loads
+## How to Perform Huge Data Loads
 
 Hello, folks today we are going to discuss one of the Major, technical challenge, that every data engineer Will face while performing Huge data loads.
 
