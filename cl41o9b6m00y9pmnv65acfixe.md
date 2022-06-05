@@ -14,9 +14,21 @@ Hello Folks, Today I am back With another article On Snowflake, Data ingestion. 
 ** 1) Sample Data Pipeline: **
 ![sample_data_migration.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1629040504143/9cjowagQu.jpeg)
 
-As you all know, In the first part i have discussed, the need of data lake and its usefulness in any Analytics Project.
+As you all know, In the first part i have discussed, the need of data lake and its usefulness in any Analytics Project. (Adding Link Over Here)
 
-![snowflake.drawio (1).png](https://cdn.hashnode.com/res/hashnode/image/upload/v1648997001473/pB0ll63n6.png)
+
+%[https://naveenvadlamudi.hashnode.dev/snowflake-data-migration-part-1]
+
+Firstly We integrate the data from different sources and will load them, into AWS S3 in a raw zone which acts as a datalake.
+
+- Because over S3 we store the data from multiple tables. As a Simple CSV Files ....
+
+- And Once the Load is Done We transfer the data from the Raw files into Snowflake Landing Layer, Using the ``COPY INTO`` Command.
+
+- Once the Data is Loaded into Landing Layer We Perform a ```Change Data Capture``` over main table from ```Cleaned Layer``` which will let us know whether the data came is Updated / Inserted and we respectively do the operations on the main table.
+
+- Finally, once the data ingestion is completed we start building the data warehouse, i.e Dimensions and Fact Tables, to serve our business purpose. Which is usually Datawarehouse layer.
+
 
 
 ![snowflake.drawio_new.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1648998091770/LSyZo-OFk.png)
