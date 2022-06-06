@@ -19,15 +19,19 @@ As you all know, In the first part i have discussed, the need of data lake and i
 
 %[https://naveenvadlamudi.hashnode.dev/snowflake-data-migration-part-1]
 
+** Incremental Data Load:  ** 
+
 Firstly We integrate the data from different sources and will load them, into AWS S3 in a raw zone which acts as a datalake.
 
 - Because over S3 we store the data from multiple tables. As a Simple CSV Files ....
 
 - And Once the Load is Done We transfer the data from the Raw files into Snowflake Landing Layer, Using the ``COPY INTO`` Command.
 
-- Once the Data is Loaded into Landing Layer We Perform a ```Change Data Capture``` over main table from ```Cleaned Layer``` which will let us know whether the data came is Updated / Inserted and we respectively do the operations on the main table.
+- From there, we Perform a ```Change Data Capture``` over main table from ```Cleaned Layer``` which will let us know whether the data arrived is Updated / Inserted so we respectively perform the necessary operations on the main table.
 
 - Finally, once the data ingestion is completed we start building the data warehouse, i.e Dimensions and Fact Tables, to serve our business purpose. Which is usually Datawarehouse layer.
+
+- And at the end once the DW layer is Succesfully Completed, we clone them into semantic layer for visualization.
 
 
 
