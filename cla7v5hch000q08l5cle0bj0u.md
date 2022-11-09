@@ -1,4 +1,4 @@
-# What is it like being a Data Engineer 😏
+# Types of DE😏
 
 Hello everyone, In this article, I will elaborate the
  
